@@ -1,6 +1,5 @@
 package com.example.todoapp
 
-import android.graphics.Paint
 import android.graphics.Paint.STRIKE_THRU_TEXT_FLAG
 import android.view.LayoutInflater
 import android.view.View
@@ -23,6 +22,9 @@ class ToDoAdapter(private val todos: MutableList<ToDo>) :
         notifyDataSetChanged()
     }
 
+    fun getTodos(): MutableList<ToDo> {
+        return todos
+    }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TodoViewHolder {
         val viewHolderInflated = LayoutInflater.from(parent.context)
             .inflate(
